@@ -1,0 +1,46 @@
+$(".submit-login").on("click", () => {
+    let login = $("#exampleInputEmail1");
+    let password = $("#exampleInputPassword1");
+
+    console.log(login.value, password.value)
+    if(login.value != "" && password.value != ""){
+        $(".form.form-reg").css("display: block");
+        $(".form.form-login").css("display: none");
+    }
+    else{
+        alert("error")
+    }
+})
+
+
+
+
+let btnlogin = document.querySelector(".submit-login");
+
+
+
+
+
+class Student{
+    constructor(fio, login, password){
+        this.fio = fio;
+    }
+    regPerson(login, password){
+        if(login.split("@").length >= 2 && password.length > 8){
+            this.login = login;
+            this.password = password;
+        }
+        else{
+            return "Не подходят данные"
+        }
+    }
+    get loginPerson (){
+        if(this.login != undefined && this.password != undefined){
+            console.log(`Пользователь ${this.fio} успешно зарегистрирован`);
+        }
+        else{
+            console.log(`Пользователь не зарегистрирован`);
+        }
+    }
+
+}
