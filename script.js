@@ -1,17 +1,3 @@
-$(".submit-login").on("click", () => {
-    let login = $("#exampleInputEmail1");
-    let password = $("#exampleInputPassword1");
-
-    console.log(login.value, password.value)
-    if(login.value != "" && password.value != ""){
-        $(".form.form-reg").css("display: block");
-        $(".form.form-login").css("display: none");
-    }
-    else{
-        alert("error")
-    }
-})
-
 
 
 
